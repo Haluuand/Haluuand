@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<declare-styleable name="MyView">-->
+        <!--<attr name="Text" format="string"/>-->
+        <!--<attr name="Oriental">-->
+            <!--<enum name="Horizontal" value="1"/>-->
+            <!--<enum name="Vertical" value="0"/>-->
+        <!--</attr>-->
+        <!--<attr name="Color" format="color"/>-->
+        <!--<attr name="TextSize" format="integer"/>-->
+    <!--</declare-styleable>-->
+    <!--<attr name="fontsize" format="integer"/>-->
+    <!--<attr name="fontcolor" format="integer"/>-->
+    <!--<attr name="lineheight" format="integer"/>-->
+    <!--<declare-styleable name="MyTextview">-->
+        <!--<attr name="fontsize" format="integer"/>-->
+        <!--<attr name="fontcolor" format="color"/>-->
+        <!--<attr name="lineheight" format="integer"/>-->
+    <!--</declare-styleable>-->
+</resources>

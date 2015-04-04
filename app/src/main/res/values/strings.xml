@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+
+    <string name="app_name">reader</string>
+    <string name="button_bookonline">在线阅读</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_importbooks">导入书籍</string>
+    <string name="action_settings">设置</string>
+    <string name="textview_myshelf">我的书架</string>
+    <string name="button_import">导入</string>
+    <string name="textview_scanresult">扫描结果</string>
+    <string name="textview_scanning">正在扫描…</string>
+    <string name="button_scancancel">取消</string>
+    <string name="button_myshelf">书架</string>
+    <string name="textview_bookonline">在线书城</string>
+    <string name="action_arrangebooks">整理书架</string>
+    <string name="textview_arrangehelf">整理书架</string>
+    <string name="textview_book">书</string>
+    <string name="select_all">全选</string>
+    <string name="unselect_all">取消</string>
+    <string name="button_deletebook">删除</string>
+    <string name="action_goto">跳转</string>
+    <string name="action_deletebookmark">删除</string>
+    <string name="hello">Hello World, GridviewActivity!</string>
+    <string name="popup_button_decrease">减小</string>
+    <string name="popup_button_increase">增大</string>
+    
+    <string name="SETTING_FILENAME">Settings</string>
+	<string name="SETTING_BOOKSPAGENUM">PagesNum</string>
+	<string name="SETTING_FILEPATH">File Path</string>
+	<string name="SETTING_TEXTSIZE">Setting_TextSize</string>
+	<string name="SETTING_TEXTCODE">Setting_TextCode</string>
+	<string name="SETTING_BG_COLOR">Setting_Bg_Color</string>
+	<string name="SETTING_TEXT_COLOR">Setting_Text_Color</string>
+	<integer name="SETTING_RETURN">1</integer >
+	<integer name="DefTextSize">20</integer >
+	<integer name="DefTextCode">0</integer >
+	<integer name="DefTextColor">0</integer >
+	<integer name="DefBgColor">1</integer >
+	<string-array name="EncodFormat">
+		<item>GBK</item>
+		<item>UNICODE</item>
+		<item>UTF-8</item>
+	</string-array>
+	<string-array name="TextColorType">
+		<item>White</item>
+		<item>Black</item>
+		<item>Yellow</item>
+		<item>Red</item>
+		<item>Green</item>
+	</string-array>
+	<string-array name="BackgroundColorType">
+		<item>White</item>
+		<item>Black</item>
+		<item>Yellow</item>
+		<item>Red</item>
+		<item>Green</item>
+	</string-array>
+    
+</resources>

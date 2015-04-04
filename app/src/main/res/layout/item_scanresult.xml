@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="fill_parent"  
+    android:layout_height="fill_parent">   
+    <TextView  android:id="@+id/setting_list_item_text"  
+        android:layout_toLeftOf="@+id/checkBox"  
+        android:layout_width="fill_parent"   
+        android:layout_height="wrap_content" 
+        android:drawableLeft="@drawable/txt"                             
+        android:drawablePadding="10.0dip"                             
+        android:gravity="center_vertical"                             
+        android:includeFontPadding="false"  
+        android:textSize="16sp"  
+        android:textColor="#000000"  
+        android:paddingTop="10dip"  
+        android:paddingBottom="10dip"  
+        android:paddingLeft="10dip" /> 
+        <CheckBox
+	    android:layout_alignParentRight="true"
+	    android:id="@+id/checkBox"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+	    android:layout_centerHorizontal="true"
+	    android:clickable="false"
+	    android:focusable="false"
+	    android:focusableInTouchMode="false" 
+	   />
+    
+</RelativeLayout> 

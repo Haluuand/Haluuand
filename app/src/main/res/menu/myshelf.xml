@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/bookonline"
+        android:orderInCategory="100"
+        android:showAsAction="always|withText"
+        android:title="@string/button_bookonline"
+        />
+    <item
+        android:id="@+id/importbooks"
+        android:orderInCategory="100"
+        android:title="@string/action_importbooks"
+        android:showAsAction="never"></item>
+    <item
+        android:id="@+id/settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        android:showAsAction="never"></item>
+
+</menu>
