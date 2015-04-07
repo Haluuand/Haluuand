@@ -370,6 +370,11 @@ public class MyTextview extends View{
         System.out.println(f);
     }
 
+    public void setmTotalSkipBytes(long mTotalSkipBytes) {
+        this.mTotalSkipBytes = mTotalSkipBytes;
+        invalidate();
+    }
+
     public void setFontsize(int fontsize) {
         this.fontsize = fontsize;
         invalidate();

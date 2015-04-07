@@ -83,7 +83,7 @@ private TabHost mTabHost;
 	            @Override    
 	            public void onItemClick(AdapterView<?> arg0, View arg1, int position,
 	                    long arg3) {              
-	            	Book book = bService.find(bookid);
+	            	Book book = bService.getBookById(bookid);
 	            	System.out.println(book.toString());
 	            	Intent intent = new Intent(BookMarkActivity.this,TxtViewerActivity.class);
 		            intent.putExtra("position",bookMarks.get(position).getPosition());
@@ -104,18 +104,15 @@ private TabHost mTabHost;
 	         
 	        super.onCreateContextMenu(menu, v, menuInfo); 
 	    } 
-	 
-	    /** 
-	     *
-	     */ 
+
 	    @Override 
-	    public boolean onContextItemSelected(MenuItem item) { 
+	 public boolean onContextItemSelected(MenuItem item) {
 	    	 AdapterContextMenuInfo itemInfo = (AdapterContextMenuInfo)item.getMenuInfo();  
 	         int position = itemInfo.position;  
 	         //
 	        switch(item.getItemId()){ 
 	        case R.id.bookmark_goto: 
-	            Book book = bService.find(bookid);
+	            Book book = bService.getBookById(bookid);
             	System.out.println(book.toString());
             	Intent intent = new Intent(BookMarkActivity.this,TxtViewerActivity.class);
 	            intent.putExtra("position",bookMarks.get(position).getPosition());
@@ -131,24 +128,15 @@ private TabHost mTabHost;
 	            break; 
 	        } 
 	        return super.onContextItemSelected(item); 
-	    } 
-	 
-	    /** 
-	     *
-	     */ 
-	    @Override 
-	    public void onContextMenuClosed(Menu menu) { 
-	        // TODO Auto-generated method stub 
-	        super.onContextMenuClosed(menu); 
-	    } 
+	    }
 
-		
-		public boolean onCreateOptionsMenu(Menu menu) {
+     public boolean onCreateOptionsMenu(Menu menu) {
 			// Inflate the menu; this adds items to the action bar if it is present.
 			getMenuInflater().inflate(R.menu.scanresult, menu);
 			return true;
 		}
-		public boolean onOptionsItemSelected(MenuItem item) {
+
+     public boolean onOptionsItemSelected(MenuItem item) {
 	        // TODO Auto-generated method stub
 		 switch(item.getItemId()) {
 		    case R.id.button_import:

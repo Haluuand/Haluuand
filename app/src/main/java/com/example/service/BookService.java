@@ -32,7 +32,7 @@ private DBOpenHelter dbOpenHelper;
 	public void addBookDir(BookDir bDir){
 		SQLiteDatabase db = dbOpenHelper.getWritableDatabase();
 		db.execSQL("insert into bookdir(bookid,name,position) values(?,?,?)",
-				new Object[]{bDir.getBookid(),bDir.getName(),bDir.getPosition()});
+				new Object[]{bDir.getBookid(),bDir.getDirname(),bDir.getPosition()});
 		db.close();
 	}
 	
@@ -98,7 +98,7 @@ private DBOpenHelter dbOpenHelper;
 	}
 	/**
 	 */
-	public Book find(Integer id){
+	public Book getBookById(Integer id){
 		SQLiteDatabase db = dbOpenHelper.getReadableDatabase();
 		Cursor cursor = db.rawQuery("select * from bookshelf where bookid="+id.toString(),
 				null);
@@ -141,4 +141,5 @@ private DBOpenHelter dbOpenHelper;
 		db.close();
 		return result;
 	}
+
 }

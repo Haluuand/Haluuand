@@ -26,6 +26,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.entity.BookDir;
 import com.example.reader.R;
 import com.example.service.BookService;
 import com.example.service.StaticList;
@@ -158,46 +159,35 @@ public class MyshelfActivity extends Activity{
 			public void onItemClick(AdapterView<?> arg0, View arg1, int position,
 					long arg3) {
 
-//                StaticList.bookdirtest.clear();
-//                 try{
-//                     //gain.gain(StaticList.booklist.get(position).getBookPath());
-//                     gain(StaticList.booklist.get(position).getBookPath());
-//
-//                 }catch (IOException e){
-//                     System.out.println(e.getCause());
-//                 }
-////                 Set<String> bookdirname = StaticList.bookdirlist.keySet();
-////                for(String i:bookdirname){
-////                    Long value = StaticList.bookdirlist.get(i);
-////                    System.out.println(bookdirname+":  "+value);
-////                }
-//                 int i = StaticList.bookdirtest.size();
-//                for(int j = 0; j<i;j++){
-//                    System.out.println(StaticList.bookdirtest.get(j));
-//                }
+                 try{
+                     gaindir(position);
+
+                 }catch (IOException e){
+                     e.printStackTrace();
+                 }
+
                  Intent intent = new Intent(mContext,TxtViewerActivity.class);
-				 intent.putExtra("path",StaticList.booklist.get(position).getBookPath());
-				 intent.putExtra("position", StaticList.booklist.get(position).getPosition());
-	             intent.putExtra("id",StaticList.booklist.get(position).getBookId());
+                 intent.putExtra("path",StaticList.booklist.get(position).getBookPath());
+                 intent.putExtra("position", StaticList.booklist.get(position).getPosition());
+                 intent.putExtra("id",StaticList.booklist.get(position).getBookId());
 				 startActivity(intent);
 				
 			}
 		});
     }
-    public void gain(String path) throws IOException{
+    public void gaindir(int listposition) throws IOException{
 
+        StaticList.bookdirlist.clear();
+        String path = StaticList.booklist.get(listposition).getBookPath();
         GetTextCode(path);
-//		db = dbOpenHelper.getWritableDatabase();
         FileInputStream fInputStream = new FileInputStream(new File(path));
         InputStreamReader inputStreamReader = new InputStreamReader(fInputStream, Setting_text_code);
         BufferedReader in = new BufferedReader(inputStreamReader);
         String line =  in.readLine();
-        //String[] strings = in.r;
         long position = 0;
-        int lengthArr = 0;
+        int lengthArr;
         String temp;
         while(line!= null){
-            position += line.length();
             temp = line.trim();
             lengthArr = temp.length();
             if (lengthArr > 20)
@@ -209,17 +199,14 @@ public class MyshelfActivity extends Activity{
             }
             if (temp.contains("第") && (temp.contains("章") || temp.contains("节")))
             {
-                //BookDir bDir = new BookDir(position, temp,bookid);
-//	    		db.execSQL("insert into bookdir(bookid,name,position) values(?,?,?)",
-//	    				new Object[]{bookid,temp,position});
-//                StaticList.bookdirlist.put(temp,position);
-                StaticList.bookdirtest.add(temp);
+                BookDir bDir = new BookDir(position, temp,StaticList.booklist.get(listposition).getBookId());
+                StaticList.bookdirlist.add(bDir);
             }
+
+            position += line.length()+2;
             line = in.readLine();
         }
-//		db.close();
         in.close();
-        //return dirlist;
     }
     private void GetTextCode(String path)
     {

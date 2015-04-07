@@ -2,13 +2,13 @@ package com.example.entity;
 
 public class BookDir {
 	private long position;
-	private String name;
+	private String dirname;
 	private int bookid;
 	
-	public BookDir(long position, String name, int bookid) {
+	public BookDir(long position, String dirname, int bookid) {
 		super();
 		this.position = position;
-		this.name = name;
+		this.dirname = dirname;
 		this.bookid = bookid;
 	}
 	public int getBookid() {
@@ -23,11 +23,11 @@ public class BookDir {
 	public void setPosition(long position) {
 		this.position = position;
 	}
-	public String getName() {
-		return name;
+	public String getDirname() {
+		return dirname;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String dirname) {
+		this.dirname = dirname;
 	}
 	
 	

@@ -39,17 +39,14 @@
             
         </activity>
         <activity 
-            android:name="com.example.activity.BookOnlineActivity"
-            android:label="@string/textview_bookonline" >
-            
-        </activity>
-        <activity 
-            android:name="com.example.activity.TxtViewerActivity">
-            
+            android:name="com.example.activity.TxtViewerActivity"
+            android:launchMode="singleTask">
         </activity>
         <activity 
             android:name="com.example.activity.BookMarkActivity">
-            
+        </activity>
+        <activity
+            android:name="com.example.activity.BookMarkDirActivity">
         </activity>
         
     </application>

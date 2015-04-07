@@ -2,6 +2,7 @@ package com.example.activity;
 
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.entity.BookDir;
 import com.example.service.StaticList;
 
 import java.io.BufferedInputStream;
@@ -79,10 +80,11 @@ public class GainDirectory {
 	        }
 	        if (temp.contains("第") && (temp.contains("章") || temp.contains("节")))
 	        {
-	        	//BookDir bDir = new BookDir(position, temp,bookid);
+//	        	BookDir bDir = new BookDir(position, temp,bookid);
 //	    		db.execSQL("insert into bookdir(bookid,name,position) values(?,?,?)",
 //	    				new Object[]{bookid,temp,position});
-                StaticList.bookdirlist.put(temp,position);
+
+//                StaticList.bookdirlist.add(bDir);
 	        }
 	        line = in.readLine();	
 		}

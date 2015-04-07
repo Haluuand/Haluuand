@@ -4,12 +4,9 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Color;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnGestureListener;
 import android.view.Gravity;
@@ -40,6 +37,7 @@ import com.example.reader.R;
 import com.example.service.BookService;
 import com.example.service.MyTextview;
 import com.example.service.PreferencesService;
+import com.example.service.StaticList;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -98,12 +96,13 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
 
    	    bService = new BookService(this);
         pService = new PreferencesService(this);
-  
-		setContentView(R.layout.activity_txt_viewer);
+
 		Intent intent=getIntent();
-		fileName=intent.getStringExtra("path");
-		mTotalSkipBytes = intent.getLongExtra("position", 0);
-		bookid = intent.getIntExtra("id", 0);
+        fileName=intent.getStringExtra("path");
+        mTotalSkipBytes = intent.getLongExtra("position", 0);
+        bookid = intent.getIntExtra("id", 0);
+
+        setContentView(R.layout.activity_txt_viewer);
         myTextview = (MyTextview)findViewById(R.id.textView_reader1);
 
         GetTextCode();
@@ -144,6 +143,7 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
         bgColorRes = (Integer)params.get("bgcolor");
         nightmodel = (Boolean)params.get("nightmodel");
     }
+
 	protected void onPause(){
         pService.save(fontsize,fontcolor,nightmodel);
 		long saveposition = myTextview.getmTotalSkipBytes();
@@ -152,21 +152,27 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
 		bService.updatePosition(book);
 		super.onPause();
 	}
-    @Override  
-    public boolean onKeyDown(int keyCode, KeyEvent event)  
-	{  
-    	if (keyCode == KeyEvent.KEYCODE_BACK )  
-    	{  
-    		Intent intent = new Intent(TxtViewerActivity.this,
-    				MyshelfActivity.class);
-    		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			TxtViewerActivity.this.startActivity(intent);
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+	{
+    	if (keyCode == KeyEvent.KEYCODE_BACK )
+    	{
+    		finish();
 			return true;
-    	}     
-    	return false;  
-	}  
-	
-	public boolean onCreateOptionsMenu(Menu menu) {
+    	}
+    	return false;
+	}
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        fileName=intent.getStringExtra("path");
+        mTotalSkipBytes = intent.getLongExtra("position", 0);
+        bookid = intent.getIntExtra("id", 0);
+        myTextview.setmTotalSkipBytes(mTotalSkipBytes);
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
 		// TODO Auto-generated method stub
 		return true;
 	}
@@ -287,15 +293,19 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
 					    Date   curDate   =   new   Date(System.currentTimeMillis());    
 						String   datetime   =   formatter.format(curDate); 
 						mVector = myTextview.getmText();
-						String content = "\n"+mVector.get(0)+"\n"+mVector.get(1)+"\n"+mVector.get(2);
+                        String content = "";
+                        for(String v:mVector){
+                            content += v;
+                        }
 						BookMark bMark = new BookMark(myTextview.getmTotalSkipBytes(),
 								datetime,content,bookid);
 						bService.addBookMark(bMark);
 						Toast.makeText(TxtViewerActivity.this, "添加成功", Toast.LENGTH_SHORT).show();
 						break;
 					case MenuUtils.MENU_DIRECTORY_BOOKMARK:	
-						Intent intent = new Intent(TxtViewerActivity.this,BookMarkActivity.class);
-			            intent.putExtra("id",bookid);
+//						Intent intent = new Intent(TxtViewerActivity.this,BookMarkActivity.class);
+                        Intent intent = new Intent(TxtViewerActivity.this,BookMarkDirActivity.class);
+			            intent.putExtra("bookid",bookid);
 						startActivity(intent);
 						break;
 					case MenuUtils.MENU_OTHER:
