@@ -51,7 +51,7 @@ import java.util.Map;
 import java.util.Vector;
 
 @SuppressLint({ "SimpleDateFormat", "ResourceAsColor" })
-public class TxtViewerActivity extends Activity implements OnGestureListener {
+public class TxtViewerActivity extends Activity implements OnGestureListener ,FlipperLayout.TouchListener{
     /**
      * 遗留问题，color不会存入preference，所以这个写死了，阅读背景不能自定义换
      */
@@ -79,8 +79,10 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
     private Context mContext = this;
     private MyTextview myTextview;
 	private String Setting_text_code;
+    private FlipperLayout rootLayout;
 
-	
+    private View on,show,down;
+    private MyTextview onmytextview,showmytextview,downmytextview;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -90,26 +92,54 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		initPopuWindows();
 
-		DisplayMetrics dm = new DisplayMetrics();
-	    dm = getResources().getDisplayMetrics();   
+		DisplayMetrics dm = getResources().getDisplayMetrics();
 	  	mScreenWidth = dm.widthPixels;
 
-   	    bService = new BookService(this);
+        bService = new BookService(this);
         pService = new PreferencesService(this);
 
-		Intent intent=getIntent();
+        Intent intent=getIntent();
         fileName=intent.getStringExtra("path");
         mTotalSkipBytes = intent.getLongExtra("position", 0);
         bookid = intent.getIntExtra("id", 0);
 
         setContentView(R.layout.activity_txt_viewer);
-        myTextview = (MyTextview)findViewById(R.id.textView_reader1);
 
+        rootLayout = (FlipperLayout) findViewById(R.id.slidepage_container);
+        on = LayoutInflater.from(this).inflate(R.layout.item_slidepage, null);
+        onmytextview = (MyTextview) on.findViewById(R.id.slidepage_mytextview);
+        initMyTextView(onmytextview,mTotalSkipBytes,-1);
+
+        show = LayoutInflater.from(this).inflate(R.layout.item_slidepage, null);
+        showmytextview = (MyTextview) show.findViewById(R.id.slidepage_mytextview);
+        initMyTextView(showmytextview,mTotalSkipBytes,1);
+
+        down = LayoutInflater.from(this).inflate(R.layout.item_slidepage, null);
+        downmytextview = (MyTextview) down.findViewById(R.id.slidepage_mytextview);
+        initMyTextView(downmytextview,mTotalSkipBytes,2);
+
+        rootLayout.initFlipperViews(this,down,show,on);
+
+
+//        ViewTreeObserver vto2 = textView_reader.getViewTreeObserver();
+//        vto2.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+//            @Override
+//            public void onGlobalLayout() {
+//                textView_reader.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+//                Log.i("TAG","宽："+textView_reader.getWidth()+"高："+textView_reader.getHeight());
+//            }
+//        });
+
+        mGestureDetector = new GestureDetector(TxtViewerActivity.this,this);
+
+    }
+    private void initMyTextView(MyTextview myTextview,long mTotalSkipBytes,int mode){
         GetTextCode();
         final Bundle bundle = new Bundle();
         bundle.putString("filename",fileName);
         bundle.putString("textcode",Setting_text_code);
         bundle.putLong("skipbytes",mTotalSkipBytes);
+        bundle.putInt("mode",mode);
         LoadSettings();
         if(nightmodel){
             fontcolor = getResources().getColor(R.color.light);
@@ -121,18 +151,6 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
         bundle.putInt("fontcolor",fontcolor);
         bundle.putInt("fontsize",fontsize);
         myTextview.setBundle(bundle);
-
-//        ViewTreeObserver vto2 = textView_reader.getViewTreeObserver();
-//        vto2.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-//            @Override
-//            public void onGlobalLayout() {
-//                textView_reader.getViewTreeObserver().removeGlobalOnLayoutListener(this);
-//                Log.i("TAG","宽："+textView_reader.getWidth()+"高："+textView_reader.getHeight());
-//            }
-//        });
-
-		mGestureDetector = new GestureDetector(TxtViewerActivity.this,this);
-
     }
 
     private void LoadSettings()
@@ -146,7 +164,7 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
 
 	protected void onPause(){
         pService.save(fontsize,fontcolor,nightmodel);
-		long saveposition = myTextview.getmTotalSkipBytes();
+		long saveposition = showmytextview.getmTotalSkipBytes();
 		bService = new BookService(this);
 		Book book = new Book(bookid,fileName,saveposition);
 		bService.updatePosition(book);
@@ -184,7 +202,7 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
 			menulists = MenuUtils.getTxtViewerMenu();
 			menuAdapter = new MenuAdapter();
 			menuGridView.setAdapter(menuAdapter);
-			popup.showAtLocation(this.findViewById(R.id.txtviewermainlayout), Gravity.BOTTOM, 0, 0);
+			popup.showAtLocation(this.findViewById(R.id.slidepage_container), Gravity.BOTTOM, 0, 0);
 		}
 		return false;
 	}
@@ -282,7 +300,7 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
 					case MenuUtils.MENU_FONT:
 						if (popupfontsize != null) {
 							popupfontsize.showAtLocation(
-									TxtViewerActivity.this.findViewById(R.id.txtviewermainlayout),
+									TxtViewerActivity.this.findViewById(R.id.slidepage_container),
 									Gravity.BOTTOM, 0, 0);
 						}
 						break;
@@ -358,20 +376,20 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
 	
 	@Override
 	public boolean onDown(MotionEvent arg0) {
-		// TODO Auto-generated method stub
-		if(arg0.getX()<(mScreenWidth/3)) {
-			myTextview.pageup();
-		}else if(arg0.getX()>(mScreenWidth/3*2)){
-			myTextview.pagedown();
-		}else{
-            if (popup != null) {
-                menulists = MenuUtils.getTxtViewerMenu();
-                menuAdapter = new MenuAdapter();
-                menuGridView.setAdapter(menuAdapter);
-                popup.showAtLocation(this.findViewById(R.id.txtviewermainlayout), Gravity.BOTTOM, 0, 0);
-            }
-        }
-		return true;
+//		// TODO Auto-generated method stub
+//		if(arg0.getX()<(mScreenWidth/3)) {
+//			myTextview.pageup();
+//		}else if(arg0.getX()>(mScreenWidth/3*2)){
+//			myTextview.pagedown();
+//		}else{
+//            if (popup != null) {
+//                menulists = MenuUtils.getTxtViewerMenu();
+//                menuAdapter = new MenuAdapter();
+//                menuGridView.setAdapter(menuAdapter);
+//                popup.showAtLocation(this.findViewById(R.id.slidepage_container), Gravity.BOTTOM, 0, 0);
+//            }
+//        }
+		return false;
 	}
 
 	@Override
@@ -429,6 +447,54 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
 	public boolean onSingleTapUp(MotionEvent arg0) {		return false;
 	}
 
+    @Override
+    public View createView(int direction) {
+        switch (direction){
+            case -1:
+                mTotalSkipBytes = mTotalSkipBytes + downmytextview.getmCurrentByteInPage();
+                down = LayoutInflater.from(this).inflate(R.layout.item_slidepage, null);
+                downmytextview = (MyTextview) down.findViewById(R.id.slidepage_mytextview);
+                initMyTextView(downmytextview,mTotalSkipBytes,1);
+                return down;
+
+            case 1:
+                mTotalSkipBytes = mTotalSkipBytes - onmytextview.getmCurrentByteInPage();
+                on = LayoutInflater.from(this).inflate(R.layout.item_slidepage, null);
+                onmytextview = (MyTextview) on.findViewById(R.id.slidepage_mytextview);
+                initMyTextView(onmytextview,mTotalSkipBytes,-1);
+                return on;
+            default:
+                return null;
+        }
+    }
+
+    @Override
+    public boolean currentIsFirstPage() {
+        if(mTotalSkipBytes == 0){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean currentIsLastPage() {
+        boolean tureralse = downmytextview.getIsEnd();
+        return tureralse;
+    }
+
+    @Override
+    public boolean whetherHasPreviousPage() {
+        if(mTotalSkipBytes == 0){
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public boolean whetherHasNextPage() {
+        boolean tureralse = downmytextview.getIsEnd();
+        return !tureralse;
+    }
 
 
     private class MenuAdapter extends BaseAdapter {

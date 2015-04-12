@@ -49,35 +49,86 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyshelfActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/activity/MyshelfActivity.java">
+      <file leaf-file-name="MyTextview.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/service/MyTextview.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56325823" vertical-offset="3850" max-vertical-offset="7975">
-              <caret line="205" column="39" selection-start-line="205" selection-start-column="39" selection-end-line="205" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="4490" max-vertical-offset="7800">
+              <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
               <folding>
-                <element signature="e#1549#1567#0" expanded="true" />
-                <element signature="e#2813#3846#0" expanded="true" />
-                <element signature="e#3835#3836#0" expanded="true" />
-                <element signature="e#3962#3982#0" expanded="true" />
-                <element signature="e#3985#4006#0" expanded="true" />
-                <element signature="e#4979#5670#0" expanded="true" />
-                <element signature="e#5665#5666#0" expanded="true" />
-                <element signature="method#GetTextCode#0;class#MyshelfActivity#0" expanded="false" />
-                <element signature="method#onDestroyActionMode#0;class#MultiChoiceModeListener#0;class#MyshelfActivity#0" expanded="false" />
-                <element signature="method#onPrepareActionMode#0;class#MultiChoiceModeListener#0;class#MyshelfActivity#0" expanded="false" />
-                <element signature="method#onItemCheckedStateChanged#0;class#MultiChoiceModeListener#0;class#MyshelfActivity#0" expanded="false" />
-                <element signature="method#onActionItemClicked#0;class#MultiChoiceModeListener#0;class#MyshelfActivity#0" expanded="false" />
-                <element signature="class#ViewHolder#0;class#MyshelfActivity#0" expanded="false" />
+                <element signature="method#onMeasure#0;class#MyTextview#0" expanded="false" />
+                <element signature="method#getStringFromFileForward#0;class#MyTextview#0" expanded="false" />
+                <element signature="method#pageup#0;class#MyTextview#0" expanded="false" />
+                <element signature="e#13169#13218#0" expanded="false" />
+                <element signature="e#13698#13699#0" expanded="true" />
+                <element signature="e#13739#13740#0" expanded="true" />
+                <element signature="method#getIsEnd#0;class#MyTextview#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyTextview.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/service/MyTextview.java">
+      <file leaf-file-name="TxtViewerActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/activity/TxtViewerActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2900" max-vertical-offset="9650">
-              <caret line="145" column="30" selection-start-line="145" selection-start-column="26" selection-end-line="145" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.610052" vertical-offset="5023" max-vertical-offset="5975">
+              <caret line="484" column="4" selection-start-line="484" selection-start-column="4" selection-end-line="490" selection-end-column="5" />
+              <folding>
+                <element signature="method#LoadSettings#0;class#TxtViewerActivity#0" expanded="false" />
+                <element signature="method#onKeyDown#0;class#TxtViewerActivity#0" expanded="false" />
+                <element signature="method#onNewIntent#0;class#TxtViewerActivity#0" expanded="false" />
+                <element signature="method#onCreateOptionsMenu#0;class#TxtViewerActivity#0" expanded="false" />
+                <element signature="method#onMenuOpened#0;class#TxtViewerActivity#0" expanded="false" />
+                <element signature="method#onPrepareOptionsMenu#0;class#TxtViewerActivity#0" expanded="false" />
+                <element signature="docComment;method#initPopuWindows#0;class#TxtViewerActivity#0" expanded="false" />
+                <element signature="method#initPopuWindows#0;class#TxtViewerActivity#0" expanded="false" />
+                <element signature="method#GetTextCode#0;class#TxtViewerActivity#0" expanded="false" />
+                <element signature="method#onFling#0;class#TxtViewerActivity#0" expanded="false" />
+                <element signature="method#onSingleTapUp#0;class#TxtViewerActivity#0" expanded="false" />
+                <element signature="class#MenuAdapter#0;class#TxtViewerActivity#0" expanded="false" />
+                <element signature="class#ViewHodler#0;class#TxtViewerActivity#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="item_slidepage.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_slidepage.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.8333335" vertical-offset="0" max-vertical-offset="500">
+              <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlipperLayout.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/activity/FlipperLayout.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="6713" max-vertical-offset="9225">
+              <caret line="284" column="0" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="View.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sdk/sources/android-19/android/view/View.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="180416" max-vertical-offset="477950">
+              <caret line="7404" column="0" selection-start-line="7404" selection-start-column="0" selection-end-line="7404" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewGroup.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../sdk/sources/android-19/android/view/ViewGroup.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="57716" max-vertical-offset="166350">
+              <caret line="2375" column="0" selection-start-line="2375" selection-start-column="0" selection-end-line="2375" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1496,7 +1547,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="5712986174077" />
+        <entry key="$PROJECT_DIR$" value="5715318670382" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1662,7 +1713,7 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
-                            <option value="$PROJECT_DIR$/../../sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar" />
+                            <option value="$PROJECT_DIR$/../sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar" />
                             <option value="$MODULE_DIR$/libs/android-async-http-1.4.4.jar" />
                           </list>
                         </option>
@@ -1745,7 +1796,7 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
-                            <option value="$PROJECT_DIR$/../../sdk/extras/android/m2repository/com/android/support/support-v4/19.0.0/support-v4-19.0.0.jar" />
+                            <option value="$PROJECT_DIR$/../sdk/extras/android/m2repository/com/android/support/support-v4/19.0.0/support-v4-19.0.0.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/library" />
@@ -1843,7 +1894,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/customcolor_0.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/actionbar_bg.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/color.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_txt_viewer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/service/PreferencesService.java" />
         <option value="$PROJECT_DIR$/app/libs/astuetz/PagerSlidingTabStrip.java" />
         <option value="$PROJECT_DIR$/app/libs/java/astuetz/PagerSlidingTabStrip.java" />
@@ -1855,9 +1905,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_bookmark_dir.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_shelfgrid.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/service/MyTextview.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_bookmark.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/activity/TxtViewerActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/activity/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/activity/GainDirectory.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/service/StaticList.java" />
@@ -1872,6 +1920,11 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_bookmark.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/activity/BookMarkFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/activity/MyshelfActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_txt_viewer.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/activity/FlipperLayout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/service/MyTextview.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/activity/TxtViewerActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_slidepage.xml" />
       </list>
     </option>
   </component>
@@ -1911,6 +1964,20 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1988,6 +2055,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Haluuand" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2119,20 +2216,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reader" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2148,11 +2231,11 @@
     <property name="options.searchVisible" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="040AHH5SXENS" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="RCWGHM65HYMFU4PB" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_21_x86" />
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PagerSlidingTabStrip-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../workpalce/SlideLayout_test" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res" />
@@ -2163,11 +2246,11 @@
       <recent name="com.example.activity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Android\Haluuand\app\src\main\java\com\example\activity" />
       <recent name="C:\Android\workpalce\Haluuand\app\src\main\res\drawable-hdpi" />
       <recent name="C:\Android\workpalce\Haluuand" />
       <recent name="C:\Android\workpalce\Haluuand\app\libs\java" />
       <recent name="C:\Android\workpalce\Haluuand\app\libs" />
-      <recent name="C:\Android\workplace\reader1\app\src\main\res\drawable-mdpi" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Android\workpalce\Haluuand" />
@@ -2392,24 +2475,24 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.74396133" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3268921" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.74396133" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5378422" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32823366" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26273885" sideWeight="0.49919486" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26592356" sideWeight="0.49919486" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38647342" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21656051" sideWeight="0.50080514" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -2461,18 +2544,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/activity/TxtViewerActivity.java</url>
+          <line>450</line>
+          <properties class="com.example.activity.TxtViewerActivity" method="createView" />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="27" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/service/MyTextview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3625" max-vertical-offset="10400">
-          <caret line="145" column="30" selection-start-line="145" selection-start-column="26" selection-end-line="145" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_launcher.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2508,18 +2591,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/menu_select_down.9.png">
-      <provider selected="true" editor-type-id="ninepatcheditor">
+      <provider editor-type-id="images">
         <state />
       </provider>
-      <provider editor-type-id="images">
+      <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/menu_select.9.png">
-      <provider selected="true" editor-type-id="ninepatcheditor">
+      <provider editor-type-id="images">
         <state />
       </provider>
-      <provider editor-type-id="images">
+      <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
       </provider>
     </entry>
@@ -2561,18 +2644,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/menu_background.9.png">
-      <provider selected="true" editor-type-id="ninepatcheditor">
-        <state />
-      </provider>
       <provider editor-type-id="images">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../sdk/sources/android-19/android/app/Fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3322034" vertical-offset="7204" max-vertical-offset="44525">
-          <caret line="344" column="13" selection-start-line="344" selection-start-column="13" selection-end-line="344" selection-end-column="13" />
-        </state>
+      <provider selected="true" editor-type-id="ninepatcheditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_shelfgrid.xml">
@@ -2605,14 +2681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4400">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/activity/TxtViewerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7675" max-vertical-offset="12100">
-          <caret line="307" column="57" selection-start-line="307" selection-start-column="57" selection-end-line="307" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -2656,16 +2724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="675" max-vertical-offset="1375">
           <caret line="69" column="18" selection-start-line="53" selection-start-column="8" selection-end-line="69" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../sdk/platforms/android-19/data/res/layout/simple_list_item_1.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.166666" vertical-offset="140" max-vertical-offset="800">
-          <caret line="25" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -2725,17 +2783,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_scanresult.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_txt_viewer.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
@@ -2809,13 +2856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../sdk/sources/android-19/android/inputmethodservice/IInputMethodWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07118644" vertical-offset="5833" max-vertical-offset="7175">
-          <caret line="279" column="0" selection-start-line="279" selection-start-column="0" selection-end-line="279" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/src/com/astuetz/PagerSlidingTabStrip.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.784746" vertical-offset="11758" max-vertical-offset="12350">
@@ -2851,32 +2891,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/service/MyTextview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2610" max-vertical-offset="9650">
-          <caret line="145" column="30" selection-start-line="145" selection-start-column="26" selection-end-line="145" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/activity/MyshelfActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56325823" vertical-offset="3850" max-vertical-offset="7975">
-          <caret line="205" column="39" selection-start-line="205" selection-start-column="39" selection-end-line="205" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3125" max-vertical-offset="7775">
+          <caret line="191" column="0" selection-start-line="191" selection-start-column="0" selection-end-line="191" selection-end-column="38" />
           <folding>
-            <element signature="e#1549#1567#0" expanded="true" />
-            <element signature="e#2813#3846#0" expanded="true" />
-            <element signature="e#3835#3836#0" expanded="true" />
-            <element signature="e#3962#3982#0" expanded="true" />
-            <element signature="e#3985#4006#0" expanded="true" />
-            <element signature="e#4979#5670#0" expanded="true" />
-            <element signature="e#5665#5666#0" expanded="true" />
             <element signature="method#GetTextCode#0;class#MyshelfActivity#0" expanded="false" />
             <element signature="method#onDestroyActionMode#0;class#MultiChoiceModeListener#0;class#MyshelfActivity#0" expanded="false" />
             <element signature="method#onPrepareActionMode#0;class#MultiChoiceModeListener#0;class#MyshelfActivity#0" expanded="false" />
             <element signature="method#onItemCheckedStateChanged#0;class#MultiChoiceModeListener#0;class#MyshelfActivity#0" expanded="false" />
             <element signature="method#onActionItemClicked#0;class#MultiChoiceModeListener#0;class#MyshelfActivity#0" expanded="false" />
             <element signature="class#ViewHolder#0;class#MyshelfActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_txt_viewer.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26785713" vertical-offset="0" max-vertical-offset="560">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sdk/sources/android-19/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="180416" max-vertical-offset="477950">
+          <caret line="7404" column="0" selection-start-line="7404" selection-start-column="0" selection-end-line="7404" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sdk/sources/android-19/android/view/ViewGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="57716" max-vertical-offset="166350">
+          <caret line="2375" column="0" selection-start-line="2375" selection-start-column="0" selection-end-line="2375" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/activity/FlipperLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6713" max-vertical-offset="9225">
+          <caret line="284" column="0" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_slidepage.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8333335" vertical-offset="0" max-vertical-offset="500">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/service/MyTextview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2915" max-vertical-offset="7800">
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+          <folding>
+            <element signature="method#onMeasure#0;class#MyTextview#0" expanded="false" />
+            <element signature="method#getStringFromFileForward#0;class#MyTextview#0" expanded="false" />
+            <element signature="method#pageup#0;class#MyTextview#0" expanded="false" />
+            <element signature="e#13169#13218#0" expanded="false" />
+            <element signature="e#13698#13699#0" expanded="true" />
+            <element signature="e#13739#13740#0" expanded="true" />
+            <element signature="method#getIsEnd#0;class#MyTextview#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/activity/TxtViewerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.610052" vertical-offset="5023" max-vertical-offset="5975">
+          <caret line="484" column="4" selection-start-line="484" selection-start-column="4" selection-end-line="490" selection-end-column="5" />
+          <folding>
+            <element signature="method#LoadSettings#0;class#TxtViewerActivity#0" expanded="false" />
+            <element signature="method#onKeyDown#0;class#TxtViewerActivity#0" expanded="false" />
+            <element signature="method#onNewIntent#0;class#TxtViewerActivity#0" expanded="false" />
+            <element signature="method#onCreateOptionsMenu#0;class#TxtViewerActivity#0" expanded="false" />
+            <element signature="method#onMenuOpened#0;class#TxtViewerActivity#0" expanded="false" />
+            <element signature="method#onPrepareOptionsMenu#0;class#TxtViewerActivity#0" expanded="false" />
+            <element signature="docComment;method#initPopuWindows#0;class#TxtViewerActivity#0" expanded="false" />
+            <element signature="method#initPopuWindows#0;class#TxtViewerActivity#0" expanded="false" />
+            <element signature="method#GetTextCode#0;class#TxtViewerActivity#0" expanded="false" />
+            <element signature="method#onFling#0;class#TxtViewerActivity#0" expanded="false" />
+            <element signature="method#onSingleTapUp#0;class#TxtViewerActivity#0" expanded="false" />
+            <element signature="class#MenuAdapter#0;class#TxtViewerActivity#0" expanded="false" />
+            <element signature="class#ViewHodler#0;class#TxtViewerActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>

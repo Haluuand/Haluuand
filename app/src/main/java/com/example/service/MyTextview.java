@@ -59,7 +59,7 @@ public class MyTextview extends View{
     private File file;
     private double filesize;
     private double f;
-
+    private int mode;
     public MyTextview(Context context) {
         this(context, null);
     }
@@ -79,6 +79,7 @@ public class MyTextview extends View{
         mTotalSkipBytes = bundle.getLong("skipbytes", 0);
         fontcolor = bundle.getInt("fontcolor");
         fontsize = bundle.getInt("fontsize");
+        mode = bundle.getInt("mode");
     }
 
     @Override
@@ -116,7 +117,14 @@ public class MyTextview extends View{
         int x=0;
         float y = -(fm.top);
 
-        mText = getStringFromFileForward(mTotalSkipBytes);
+        if(mode == -1){
+            mText = getStringFromFileBackward(mTotalSkipBytes);
+        }else if(mode == 1){
+            mText = getStringFromFileForward(mTotalSkipBytes);
+        }else if(mode == 2){
+            mText = getStringFromFileForward(mTotalSkipBytes);
+            pagedown();
+        }
         for (int i = 0, j = 0; i < mText.size(); i++, j++)
         {
             canvas.drawText(mText.elementAt(i), x, y + ((mFontHeight + mLineOffset) * j), textPaint);
@@ -205,9 +213,16 @@ public class MyTextview extends View{
      * @return 以行为单位的字符串集，用vector因为是安全的单线程
      */
     private Vector<String> getStringFromFileBackward(long bytenumber) {
+
+
         Vector<String> mString = new Vector<String>();
         Vector<String> mbackString = new Vector<String>();
         Vector<Integer> mbyte = new Vector<Integer>();
+
+        if(bytenumber == 0){
+            mString.addElement("");
+            return mString;
+        }
 
         long mbytenumber = bytenumber;
         char buff[] = new char[mMaxByteInPage];
@@ -361,7 +376,7 @@ public class MyTextview extends View{
         mTotalSkipBytes = mTotalSkipBytes + mCurrentByteInPage;
         Vector<String> vjudge = getStringFromFileForward(mTotalSkipBytes);
         if(mFileEnd != -1) {
-            setText(vjudge);
+            mText = vjudge;
         }else{
             mTotalSkipBytes = mTotalSkipBytes - mCurrentByteInPage;
             Toast.makeText(mContext,"最后一页！",Toast.LENGTH_SHORT).show();
@@ -385,15 +400,15 @@ public class MyTextview extends View{
         invalidate();
     }
 
-    public void setStrokesize(int strokesize) {
-        this.strokesize = strokesize;
-        invalidate();
-    }
-
-    public void setTypeface(Typeface typeface) {
-        this.typeface = typeface;
-        invalidate();
-    }
+//    public void setStrokesize(int strokesize) {
+//        this.strokesize = strokesize;
+//        invalidate();
+//    }
+//
+//    public void setTypeface(Typeface typeface) {
+//        this.typeface = typeface;
+//        invalidate();
+//    }
 
     public Vector<String> getmText() {
         return mText;
@@ -406,5 +421,24 @@ public class MyTextview extends View{
     private void setText(Vector<String> text) {
         mText = text;
         invalidate();
+    }
+
+    public int getmCurrentByteInPage() {
+        return mCurrentByteInPage;
+    }
+
+    public boolean getIsEnd(){
+        mTotalSkipBytes = mTotalSkipBytes + mCurrentByteInPage;
+        char buff[] = new char[mMaxByteInPage];
+        try {
+            FileInputStream fInputStream = new FileInputStream(new File(mFileName));
+            InputStreamReader inputStreamReader = new InputStreamReader(fInputStream, mTextCode);
+            BufferedReader in = new BufferedReader(inputStreamReader);
+            in.skip(mTotalSkipBytes);
+            mFileEnd = in.read(buff, 0, mMaxByteInPage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return mFileEnd == -1;
     }
 }
