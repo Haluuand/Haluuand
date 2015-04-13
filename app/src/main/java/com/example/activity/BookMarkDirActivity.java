@@ -1,6 +1,5 @@
 package com.example.activity;
 
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,13 +11,11 @@ import android.util.TypedValue;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.example.entity.Book;
 import com.example.reader.R;
 import com.example.service.BookService;
-import com.example.service.StaticList;
 
 /**
  * Created by admin on 2015/4/5.
@@ -93,7 +90,7 @@ public class BookMarkDirActivity extends FragmentActivity{
                 case 1:
                     return BookMarkFragment.newInstance(bookid);
                 default:
-                    return SuperAwesomeCardFragment.newInstance(position);
+                    return null;
             }
 
         }

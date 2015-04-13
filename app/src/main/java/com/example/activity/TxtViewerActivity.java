@@ -37,7 +37,6 @@ import com.example.reader.R;
 import com.example.service.BookService;
 import com.example.service.MyTextview;
 import com.example.service.PreferencesService;
-import com.example.service.StaticList;
 
 import java.io.BufferedInputStream;
 import java.io.File;

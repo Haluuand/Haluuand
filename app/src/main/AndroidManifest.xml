@@ -42,9 +42,7 @@
             android:name="com.example.activity.TxtViewerActivity"
             android:launchMode="singleTask">
         </activity>
-        <activity 
-            android:name="com.example.activity.BookMarkActivity">
-        </activity>
+
         <activity
             android:name="com.example.activity.BookMarkDirActivity">
         </activity>
