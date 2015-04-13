@@ -19,14 +19,14 @@ public class MenuUtils {
 	
 	public static List<MenuInfo> getTxtViewerMenu(){
 		List<MenuInfo> list=new ArrayList<MenuInfo>();
-		list.add(new MenuInfo(MENU_LANDSCAPEMODE,"夜间模式",R.drawable.menu_ic_setting,false));
-		list.add(new MenuInfo(MENU_SKIP,"跳转",R.drawable.menu_ic_logout,false));
+//		list.add(new MenuInfo(MENU_LANDSCAPEMODE,"夜间模式",R.drawable.menu_ic_setting,false));
+//		list.add(new MenuInfo(MENU_SKIP,"跳转",R.drawable.menu_ic_logout,false));
 		list.add(new MenuInfo(MENU_FONT,"字体设置",R.drawable.menu_ic_help,false));
 		list.add(new MenuInfo(MENU_NIGHTMODE,"夜间模式",R.drawable.menu_ic_exit,false));
 		list.add(0,new MenuInfo(MENU_ADD_BOOKMARK,"增加书签",R.drawable.menu_ic_setting,false));
 		list.add(0,new MenuInfo(MENU_DIRECTORY_BOOKMARK,"目录书签",R.drawable.menu_ic_setting,false));
-		list.add(0,new MenuInfo(MENU_EXIT,"退出",R.drawable.menu_ic_setting,false));
-		list.add(0,new MenuInfo(MENU_OTHER,"其它",R.drawable.menu_ic_setting,false));
+//		list.add(0,new MenuInfo(MENU_EXIT,"退出",R.drawable.menu_ic_setting,false));
+//		list.add(0,new MenuInfo(MENU_OTHER,"其它",R.drawable.menu_ic_setting,false));
 		
 		return list;
 	}

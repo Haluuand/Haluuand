@@ -1,14 +1,12 @@
 package com.example.service;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.graphics.Color;
 
-import com.example.reader.R;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PreferencesService {
 	private Context mContext;
@@ -29,7 +27,7 @@ public class PreferencesService {
 	public Map<String, Object> getPreferences(){
 		Map<String, Object> params = new HashMap<String, Object>();
 		SharedPreferences preferences = mContext.getSharedPreferences("settings", Context.MODE_PRIVATE);
-		params.put("textsize", preferences.getInt("textsize", 30));
+		params.put("textsize", preferences.getInt("textsize", 40));
 		params.put("textcolor", preferences.getInt("textcolor", Color.BLACK));
 		params.put("nightmodel", preferences.getBoolean("nightmodel", false));
 

@@ -70,7 +70,7 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
 	private int mScreenWidth = 0;
     private Integer fontcolor = Color.BLACK;
     private Integer bgColorRes = Color.WHITE;
-    private Integer fontsize = 30;
+    private Integer fontsize = 40;
     private int bookid;
     private Boolean nightmodel = false;
 	private TextView tView1;
@@ -276,8 +276,8 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
                         myTextview.setFontcolor(fontcolor);
 						pService.save(fontsize, fontcolor, nightmodel);
 						break;
-					case MenuUtils.MENU_SKIP:
-						break;
+//					case MenuUtils.MENU_SKIP:
+//						break;
 					case MenuUtils.MENU_FONT:
 						if (popupfontsize != null) {
 							popupfontsize.showAtLocation(
@@ -285,8 +285,8 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
 									Gravity.BOTTOM, 0, 0);
 						}
 						break;
-					case MenuUtils.MENU_LANDSCAPEMODE:
-						break;
+//					case MenuUtils.MENU_LANDSCAPEMODE:
+//						break;
 					case MenuUtils.MENU_ADD_BOOKMARK:
 						SimpleDateFormat   formatter   =   new   SimpleDateFormat("yyyy-MM-dd HH:mm:ss");     
 					    Date   curDate   =   new   Date(System.currentTimeMillis());    
@@ -307,13 +307,13 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
 			            intent.putExtra("bookid",bookid);
 						startActivity(intent);
 						break;
-					case MenuUtils.MENU_OTHER:
-						break;
-					case MenuUtils.MENU_EXIT:	
-						Intent intent2 = new Intent(TxtViewerActivity.this,MyshelfActivity.class);
-						intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-						TxtViewerActivity.this.startActivity(intent2);
-						break;
+//					case MenuUtils.MENU_OTHER:
+//						break;
+//					case MenuUtils.MENU_EXIT:
+//						Intent intent2 = new Intent(TxtViewerActivity.this,MyshelfActivity.class);
+//						intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//						TxtViewerActivity.this.startActivity(intent2);
+//						break;
 					}
 				}
 			});
@@ -348,9 +348,9 @@ public class TxtViewerActivity extends Activity implements OnGestureListener {
 			e.printStackTrace();
 		}
 	}
-	
-	
-	@Override
+
+
+    @Override
 	public boolean onTouchEvent(MotionEvent event) {
 		return mGestureDetector.onTouchEvent(event);
 	}

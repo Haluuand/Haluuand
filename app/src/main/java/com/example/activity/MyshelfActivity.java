@@ -6,10 +6,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.widget.DrawerLayout;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -22,7 +19,6 @@ import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,9 +45,9 @@ public class MyshelfActivity extends Activity{
 	private Context mContext = this;
 	@SuppressLint("UseSparseArrays")
 	private HashMap<Integer,Boolean> isSelected = new HashMap<Integer, Boolean>();
-    private ListView mDrawerList;
-    private ActionBarDrawerToggle mDrawerToggle;
-    private DrawerLayout mDrawerLayout;
+//    private ListView mDrawerList;
+//    private ActionBarDrawerToggle mDrawerToggle;
+//    private DrawerLayout mDrawerLayout;
     private ArrayList<String> menuLists;
     private ArrayAdapter<String> draweradapter;
 
@@ -70,12 +66,12 @@ public class MyshelfActivity extends Activity{
     	super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_myshelf);
 		ActionBar actionBar = getActionBar();
-		//actionBar.setDisplayShowHomeEnabled(false);
-        actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setDisplayShowHomeEnabled(false);
+//        actionBar.setDisplayHomeAsUpEnabled(true);
 
 		bService = new BookService(this);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerList = (ListView) findViewById(R.id.left_drawer);
+//        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        mDrawerList = (ListView) findViewById(R.id.left_drawer);
 
 
         menuLists = new ArrayList<String>();
@@ -84,65 +80,58 @@ public class MyshelfActivity extends Activity{
         }
 
 
-        draweradapter = new ArrayAdapter<String>(MyshelfActivity.this , android.R.layout.simple_list_item_1 , menuLists);
-        mDrawerList.setAdapter(draweradapter);
-        mDrawerList.setOnItemClickListener(new OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Fragment contentFragment = new ContentFragment();
+//        draweradapter = new ArrayAdapter<String>(MyshelfActivity.this , android.R.layout.simple_list_item_1 , menuLists);
+//        mDrawerList.setAdapter(draweradapter);
+//        mDrawerList.setOnItemClickListener(new OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+////                Fragment contentFragment = new ContentFragment();
+//
+//
+////                Bundle args = new Bundle();
+////                args.putString("text" , menuLists.get(position));
+//
+////                contentFragment.setArguments(args);
+//
+//
+//
+////                FragmentManager fm = getFragmentManager();
+//
+////                fm.beginTransaction().replace(R.id.content_frame , contentFragment).commit();
+//                Toast.makeText(MyshelfActivity.this,"position"+position,Toast.LENGTH_SHORT).show();
+//                if (position == menuLists.size()-1){
+//                    menuLists.add("this is added.");
+//                }
+//                draweradapter = new ArrayAdapter<String>(MyshelfActivity.this , android.R.layout.simple_list_item_1 , menuLists);
+//                mDrawerList.setAdapter(draweradapter);
+//                mDrawerLayout.closeDrawer(mDrawerList);
+//            }
+//        });
 
-
-//                Bundle args = new Bundle();
-//                args.putString("text" , menuLists.get(position));
-
-//                contentFragment.setArguments(args);
-
-
-
-//                FragmentManager fm = getFragmentManager();
-
-//                fm.beginTransaction().replace(R.id.content_frame , contentFragment).commit();
-                Toast.makeText(MyshelfActivity.this,"position"+position,Toast.LENGTH_SHORT).show();
-                if (position == menuLists.size()-1){
-                    menuLists.add("this is added.");
-                }
-                draweradapter = new ArrayAdapter<String>(MyshelfActivity.this , android.R.layout.simple_list_item_1 , menuLists);
-                mDrawerList.setAdapter(draweradapter);
-                mDrawerLayout.closeDrawer(mDrawerList);
-            }
-        });
-
-        mDrawerToggle = new ActionBarDrawerToggle(MyshelfActivity.this , mDrawerLayout , R.drawable.ic_drawer , R.string.drawer_open , R.string.drawer_close){
-
-            @Override
-            public void onDrawerOpened(View drawerView) {
-
-                super.onDrawerOpened(drawerView);
-
-//                mtitle = getActionBar().getTitle().toString();
-//                getActionBar().setTitle("Drawerlayout");
-
-                invalidateOptionsMenu();
-            }
-
-            @Override
-            public void onDrawerClosed(View drawerView) {
-
-                super.onDrawerClosed(drawerView);
-
-//                getActionBar().setTitle(mtitle);
-
-                invalidateOptionsMenu();
-            }
-        };
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
-
-
-
-
-
-
-
+//        mDrawerToggle = new ActionBarDrawerToggle(MyshelfActivity.this , mDrawerLayout , R.drawable.ic_drawer , R.string.drawer_open , R.string.drawer_close){
+//
+//            @Override
+//            public void onDrawerOpened(View drawerView) {
+//
+//                super.onDrawerOpened(drawerView);
+//
+////                mtitle = getActionBar().getTitle().toString();
+////                getActionBar().setTitle("Drawerlayout");
+//
+//                invalidateOptionsMenu();
+//            }
+//
+//            @Override
+//            public void onDrawerClosed(View drawerView) {
+//
+//                super.onDrawerClosed(drawerView);
+//
+////                getActionBar().setTitle(mtitle);
+//
+//                invalidateOptionsMenu();
+//            }
+//        };
+//        mDrawerLayout.setDrawerListener(mDrawerToggle);
 
 
 
@@ -238,20 +227,20 @@ public class MyshelfActivity extends Activity{
     }
 
 
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-
-        mDrawerToggle.syncState();
-    }
-
-
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        mDrawerToggle.onConfigurationChanged(newConfig);
-    }
+//    @Override
+//    protected void onPostCreate(Bundle savedInstanceState) {
+//        super.onPostCreate(savedInstanceState);
+//
+//        mDrawerToggle.syncState();
+//    }
+//
+//
+//
+//    @Override
+//    public void onConfigurationChanged(Configuration newConfig) {
+//        super.onConfigurationChanged(newConfig);
+//        mDrawerToggle.onConfigurationChanged(newConfig);
+//    }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
@@ -268,11 +257,11 @@ public class MyshelfActivity extends Activity{
 		return true;
 	}
 	public boolean onOptionsItemSelected(MenuItem item) {
-        // TODO Auto-generated method stub
-        if(mDrawerToggle.onOptionsItemSelected(item)){
-
-            return true;
-        }
+//        // TODO Auto-generated method stub
+//        if(mDrawerToggle.onOptionsItemSelected(item)){
+//
+//            return true;
+//        }
 
         switch(item.getItemId()) {
             case R.id.importbooks:

@@ -1,15 +1,18 @@
-<android.support.v4.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MyshelfActivity" >
+<!--<android.support.v4.widget.DrawerLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:id="@+id/drawer_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context=".MyshelfActivity" >-->
     <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
      <!-- 显示主要内容的视图 -->
         <GridView
+
             android:id="@+id/bookShelf"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -23,14 +26,14 @@
             android:verticalSpacing="30dp"
             />
     </FrameLayout>
-    <!-- 左侧的导航视图 -->
-    <ListView android:id="@+id/left_drawer"
-       android:layout_width="240dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:choiceMode="singleChoice"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="1dp"
-        android:background="#ffffcc"/>
+    <!--&lt;!&ndash; 左侧的导航视图 &ndash;&gt;-->
+    <!--<ListView android:id="@+id/left_drawer"-->
+       <!--android:layout_width="240dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="start"-->
+        <!--android:choiceMode="singleChoice"-->
+        <!--android:divider="@android:color/transparent"-->
+        <!--android:dividerHeight="1dp"-->
+        <!--android:background="#ffffcc"/>-->
 
-</android.support.v4.widget.DrawerLayout>
+<!--</android.support.v4.widget.DrawerLayout>-->
